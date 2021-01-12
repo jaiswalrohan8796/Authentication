@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set New Password</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <h2 class="text-center ftsz-24">Login</h2>
+        <p class="status text-center" style="color: #fff;">
+            <%= mess %>
+        </p>
+        <form method="POST" action="/new-password">
+            <div class="form-group row ">
+                <label for="Email" class="col-sm-3 col-form-label">New Password</label>
+                <div class="col-sm-9">
+                    <input type="hidden" name="token" value="<%= token %>">
+                    <input type="password" class="form-control" id="password" name="password" value="">
+                </div>
+            </div>
+            <div class="form-group row ">
+                <label for="Password" class="col-sm-3 col-form-label">Confirm Password</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" id="password" name="cpassword" value="">
+                </div>
+            </div>
+            <div class="form-group login-btn row mt-4">
+                <button id='login' type="submit" class="btn  col-sm-8 offset-sm-2 text-center">Submit</button>
+            </div>
+        </form>
+        <div class="other-action">
+            <a href="/">Go to Login</a>
+        </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
